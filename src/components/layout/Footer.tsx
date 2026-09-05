@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,10 +7,19 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <p className="font-display font-bold text-xl text-white tracking-wide mb-1">
-              ATHANYA<span className="text-brand-cyan">.</span>
-            </p>
-            <p className="font-body text-xs tracking-[3px] uppercase text-blue-200 mb-4">Technologies</p>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/Athanya_Symbol_Mono.svg"
+                alt="Athanya Technologies"
+                width={36}
+                height={32}
+                className="text-white brightness-0 invert"
+              />
+              <div>
+                <p className="font-display font-bold text-white text-base tracking-widest leading-none">ATHANYA</p>
+                <p className="font-body text-blue-300 text-[10px] tracking-[3px] uppercase mt-0.5">Technologies</p>
+              </div>
+            </div>
             <p className="text-blue-200 text-sm leading-relaxed">
               IT solutions for growing businesses — explained in plain English, built to last.
             </p>

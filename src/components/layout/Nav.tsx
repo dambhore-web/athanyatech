@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -31,9 +32,14 @@ export default function Nav() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="font-display font-bold text-xl text-brand-navy tracking-wide">
-          ATHANYA<span className="text-brand-cyan">.</span>
-          <span className="font-body font-semibold text-xs tracking-[3px] text-brand-slate ml-1 uppercase">Technologies</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/Athanya_Logo_Horizontal.svg"
+            alt="Athanya Technologies"
+            width={180}
+            height={52}
+            priority
+          />
         </Link>
 
         {/* Desktop */}
