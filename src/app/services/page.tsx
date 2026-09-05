@@ -118,7 +118,6 @@ export default function ServicesPage() {
           <h1
             id="services-page-heading"
             className="font-display font-bold text-white text-4xl sm:text-5xl mt-2 max-w-2xl"
-            style={{ color: "white" }}
           >
             We handle the technology. You run your business.
           </h1>

@@ -44,7 +44,6 @@ export default function Hero({ headline, subline, primaryCta, secondaryCta }: He
           <h1
             id="hero-heading"
             className="font-display font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6 animate-fade-up-delay-1"
-            style={{ color: "white" }}
           >
             {headline}
           </h1>

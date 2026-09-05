@@ -41,7 +41,6 @@ export default function AboutPage() {
             <h1
               id="about-heading"
               className="font-display font-bold text-white text-4xl sm:text-5xl mt-2 mb-6"
-              style={{ color: "white" }}
             >
               Technology that works for your business — not the other way around.
             </h1>

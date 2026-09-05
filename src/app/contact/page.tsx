@@ -35,7 +35,6 @@ export default function ContactPage() {
           <h1
             id="contact-heading"
             className="font-display font-bold text-white text-4xl sm:text-5xl mt-2 max-w-xl"
-            style={{ color: "white" }}
           >
             Let&apos;s talk about your business.
           </h1>
