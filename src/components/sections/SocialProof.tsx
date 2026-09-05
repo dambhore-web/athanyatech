@@ -10,6 +10,13 @@ const testimonials = [
   },
 ];
 
+const clients = [
+  {
+    src: "/deccanfarms-logo.svg",
+    alt: "Deccan Farms Agro Samruddhi Pvt. Ltd",
+  },
+];
+
 const industries = ["Agriculture", "Hospitality", "Retail", "Logistics", "Manufacturing", "Healthcare clinics"];
 
 export default function SocialProof() {
@@ -26,26 +33,34 @@ export default function SocialProof() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* Testimonials */}
+        <div className="max-w-2xl mb-12">
           {testimonials.map((t) => (
             <TestimonialCard key={t.name} {...t} />
           ))}
-          {/* Client logos panel */}
-          <div className="bg-brand-surface rounded-card border border-brand-line p-6 flex flex-col justify-center">
-            <p className="eyebrow mb-6">Clients we&apos;ve worked with</p>
-            <div className="flex flex-wrap items-center gap-8">
-              <div className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+        </div>
+
+        {/* Client logos strip */}
+        <div className="mb-12">
+          <p className="eyebrow mb-6">Clients we&apos;ve worked with</p>
+          <div className="flex flex-wrap items-center gap-10">
+            {clients.map((client) => (
+              <div
+                key={client.alt}
+                className="h-14 flex items-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/deccanfarms-logo.svg"
-                  alt="Deccan Farms Agro Samruddhi Pvt. Ltd"
-                  className="h-16 w-auto object-contain"
+                  src={client.src}
+                  alt={client.alt}
+                  className="h-full w-auto object-contain"
                 />
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
+        {/* Industries */}
         <div>
           <p className="eyebrow mb-4">Industries we serve</p>
           <div className="flex flex-wrap gap-3">
