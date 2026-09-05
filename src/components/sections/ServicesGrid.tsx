@@ -1,33 +1,34 @@
+import { Brain, Smartphone, Workflow, BarChart3, Globe } from "lucide-react";
 import ServiceCard from "@/components/ui/ServiceCard";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 const services = [
   {
-    icon: "🤖",
+    icon: Brain,
     title: "AI Solutions",
     description:
       "Smart AI tools that automate decisions, extract insights, and handle tasks that used to require a person.",
   },
   {
-    icon: "📱",
+    icon: Smartphone,
     title: "Mobile Applications",
     description:
       "iOS and Android apps that let your customers or field staff do more from their phones.",
   },
   {
-    icon: "⚙️",
+    icon: Workflow,
     title: "Web App Automation",
     description:
       "Stop doing repetitive tasks by hand. We build tools that run your workflows automatically.",
   },
   {
-    icon: "📊",
+    icon: BarChart3,
     title: "Data Analysis & Reporting",
     description:
       "Turn your business numbers into clear reports you can actually understand and act on.",
   },
   {
-    icon: "🌐",
+    icon: Globe,
     title: "Website Creation",
     description:
       "A professional website your customers can find and trust — no tech jargon, just results.",

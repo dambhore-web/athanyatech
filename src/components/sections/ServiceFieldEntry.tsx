@@ -1,5 +1,7 @@
+import { LucideIcon } from "lucide-react";
+
 type ServiceFieldEntryProps = {
-  icon: string;
+  icon: LucideIcon;
   name: string;
   definition: string;
   triggers: string[];
@@ -8,7 +10,7 @@ type ServiceFieldEntryProps = {
 };
 
 export default function ServiceFieldEntry({
-  icon,
+  icon: Icon,
   name,
   definition,
   triggers,
@@ -16,9 +18,7 @@ export default function ServiceFieldEntry({
   tier = "standard",
 }: ServiceFieldEntryProps) {
   return (
-    <div className={`border-b border-brand-line last:border-0 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start ${
-      tier === "flagship" ? "relative" : ""
-    }`}>
+    <div className="border-b border-brand-line last:border-0 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start relative">
       {tier === "flagship" && (
         <div className="absolute -top-3 left-0">
           <span className="bg-brand-cyan text-brand-navy font-body font-bold text-xs px-3 py-1 rounded-full tracking-wide uppercase">
@@ -27,18 +27,29 @@ export default function ServiceFieldEntry({
         </div>
       )}
       <div className={tier === "flagship" ? "pt-4" : ""}>
-        <div className="text-5xl mb-4">{icon}</div>
+        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
+          tier === "flagship" ? "gradient-cyan-navy" : "bg-brand-blue/10"
+        }`}>
+          <Icon
+            className={`w-8 h-8 ${tier === "flagship" ? "text-white" : "text-brand-blue"}`}
+            strokeWidth={1.5}
+          />
+        </div>
         <h2 className="font-display font-bold text-brand-navy text-3xl sm:text-4xl mb-4">{name}</h2>
         <p className="font-body leading-relaxed text-brand-ink text-lg">{definition}</p>
       </div>
-      <div className={`rounded-card border border-brand-line p-6 shadow-brand ${
-        tier === "flagship" ? "bg-brand-navy/5 border-brand-cyan/30" : "bg-brand-sunken"
-      } ${tier === "flagship" ? "pt-8" : ""}`}>
+      <div className={`rounded-card border p-6 shadow-brand ${
+        tier === "flagship"
+          ? "bg-brand-navy/5 border-brand-cyan/30 pt-8"
+          : "bg-brand-sunken border-brand-line"
+      }`}>
         <p className="eyebrow mb-3">You need this if...</p>
-        <ul className="space-y-2 mb-5">
+        <ul className="space-y-3 mb-5">
           {triggers.map((trigger, i) => (
-            <li key={i} className="flex items-start gap-2 text-brand-ink font-body">
-              <span className="text-brand-blue font-bold mt-0.5 shrink-0">✓</span>
+            <li key={i} className="flex items-start gap-2.5 text-brand-ink font-body">
+              <span className="mt-1 shrink-0 w-4 h-4 rounded-full bg-brand-blue/10 flex items-center justify-center">
+                <span className="text-brand-blue text-[10px] font-bold">✓</span>
+              </span>
               <span>{trigger}</span>
             </li>
           ))}

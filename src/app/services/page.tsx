@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Brain, Smartphone, Workflow, BarChart3, Globe } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ServiceFieldEntry from "@/components/sections/ServiceFieldEntry";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: "🤖",
+    icon: Brain,
     name: "AI Solutions",
     tier: "flagship" as const,
     definition:
@@ -26,7 +27,7 @@ const services = [
     outcome: "A working AI tool that saves measurable time on a specific, high-value task.",
   },
   {
-    icon: "📱",
+    icon: Smartphone,
     name: "Mobile Applications",
     tier: "flagship" as const,
     definition:
@@ -39,7 +40,7 @@ const services = [
     outcome: "A working mobile app on iOS and/or Android, tested and ready to publish.",
   },
   {
-    icon: "⚙️",
+    icon: Workflow,
     name: "Web App Automation",
     tier: "standard" as const,
     definition:
@@ -52,7 +53,7 @@ const services = [
     outcome: "Hours saved every week — work that took half a day now runs automatically.",
   },
   {
-    icon: "📊",
+    icon: BarChart3,
     name: "Data Analysis & Reporting",
     tier: "standard" as const,
     definition:
@@ -65,7 +66,7 @@ const services = [
     outcome: "A live dashboard or regular report you can check in minutes, not hours.",
   },
   {
-    icon: "🌐",
+    icon: Globe,
     name: "Website Creation",
     tier: "standard" as const,
     definition:
