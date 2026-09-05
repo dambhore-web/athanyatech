@@ -4,19 +4,13 @@ import SectionLabel from "@/components/ui/SectionLabel";
 const testimonials = [
   {
     quote:
-      "Athanya built our ordering system in 3 weeks. Our staff no longer waste time on manual entries and we can see our sales data every morning.",
-    name: "Ravi Sharma",
-    business: "Restaurant chain owner, Pune",
-  },
-  {
-    quote:
-      "I had no idea what a website even needed. They walked me through everything and delivered exactly what I asked for — on time and on budget.",
-    name: "Meena Iyer",
-    business: "Retail shop owner, Bangalore",
+      "We used to spend almost 2 hours every morning just sending out commodity price updates and farming tips to our farmer network on WhatsApp. It was manual, repetitive, and took up valuable time we needed elsewhere. Athanya built us a tool that does the same work in minutes. Our team now focuses on the business, not the phone.",
+    name: "Praveen Shelke",
+    business: "Director, Deccan Farms Agro Samruddhi Pvt. Ltd",
   },
 ];
 
-const industries = ["Hospitality", "Retail", "Logistics", "Manufacturing", "Healthcare clinics"];
+const industries = ["Agriculture", "Hospitality", "Retail", "Logistics", "Manufacturing", "Healthcare clinics"];
 
 export default function SocialProof() {
   return (
