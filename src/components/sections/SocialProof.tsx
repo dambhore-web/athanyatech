@@ -47,7 +47,7 @@ export default function SocialProof() {
             {clients.map((client) => (
               <div
                 key={client.alt}
-                className="h-14 flex items-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                className="h-14 flex items-center"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
