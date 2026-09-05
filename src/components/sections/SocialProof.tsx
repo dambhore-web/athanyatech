@@ -1,3 +1,4 @@
+import Image from "next/image";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import SectionLabel from "@/components/ui/SectionLabel";
 
@@ -30,6 +31,22 @@ export default function SocialProof() {
           {testimonials.map((t) => (
             <TestimonialCard key={t.name} {...t} />
           ))}
+          {/* Client logos panel */}
+          <div className="bg-brand-surface rounded-card border border-brand-line p-6 flex flex-col justify-center">
+            <p className="eyebrow mb-6">Clients we&apos;ve worked with</p>
+            <div className="flex flex-wrap items-center gap-8">
+              <div className="flex items-center justify-center h-16 w-36 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <Image
+                  src="/deccanfarms-logo.svg"
+                  alt="Deccan Farms Agro Samruddhi Pvt. Ltd"
+                  width={120}
+                  height={120}
+                  className="object-contain h-16 w-auto"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
