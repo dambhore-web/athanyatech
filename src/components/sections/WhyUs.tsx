@@ -4,7 +4,7 @@ const reasons = [
   {
     icon: "💬",
     heading: "Plain language, always",
-    body: "We explain what we&apos;re building and why, in terms that make sense to you — not tech speak. You&apos;ll always know what&apos;s happening with your project.",
+    body: "We explain what we're building and why — in terms that make sense to you. No tech speak. You'll always know what's happening.",
   },
   {
     icon: "🔑",
@@ -14,19 +14,19 @@ const reasons = [
   {
     icon: "💰",
     heading: "Fixed-price quotes, no surprises",
-    body: "Before we start, you get a clear quote with the full cost. We don&apos;t add fees halfway through — what we quote is what you pay.",
+    body: "Before we start, you get a clear quote with the full cost. What we quote is what you pay — no fees added halfway through.",
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section className="py-20 bg-brand-surface" aria-labelledby="why-heading">
+    <section className="py-20 bg-brand-sunken" aria-labelledby="why-heading">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12">
           <SectionLabel>Why Athanya</SectionLabel>
           <h2
             id="why-heading"
-            className="font-display font-bold text-brand-dark text-3xl sm:text-4xl"
+            className="font-display font-bold text-brand-navy text-3xl sm:text-4xl"
           >
             A technology partner you can actually trust
           </h2>
@@ -35,13 +35,10 @@ export default function WhyUs() {
           {reasons.map((reason) => (
             <div key={reason.heading}>
               <div className="text-4xl mb-4">{reason.icon}</div>
-              <h3 className="font-display font-bold text-brand-dark text-xl mb-3">
+              <h3 className="font-display font-bold text-brand-navy text-xl mb-3">
                 {reason.heading}
               </h3>
-              <p
-                className="text-brand-slate leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: reason.body }}
-              />
+              <p className="text-brand-ink-soft font-body leading-relaxed">{reason.body}</p>
             </div>
           ))}
         </div>

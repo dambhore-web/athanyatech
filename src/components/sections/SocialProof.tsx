@@ -16,23 +16,17 @@ const testimonials = [
   },
 ];
 
-const industries = [
-  "Hospitality",
-  "Retail",
-  "Logistics",
-  "Manufacturing",
-  "Healthcare clinics",
-];
+const industries = ["Hospitality", "Retail", "Logistics", "Manufacturing", "Healthcare clinics"];
 
 export default function SocialProof() {
   return (
-    <section className="py-20 bg-brand-cream" aria-labelledby="proof-heading">
+    <section className="py-20 bg-brand-paper" aria-labelledby="proof-heading">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12">
           <SectionLabel>Client stories</SectionLabel>
           <h2
             id="proof-heading"
-            className="font-display font-bold text-brand-dark text-3xl sm:text-4xl"
+            className="font-display font-bold text-brand-navy text-3xl sm:text-4xl"
           >
             Businesses that trust Athanya
           </h2>
@@ -45,14 +39,12 @@ export default function SocialProof() {
         </div>
 
         <div>
-          <p className="font-display text-xs font-semibold uppercase tracking-widest text-brand-slate mb-4">
-            Industries we serve
-          </p>
+          <p className="eyebrow mb-4">Industries we serve</p>
           <div className="flex flex-wrap gap-3">
             {industries.map((industry) => (
               <span
                 key={industry}
-                className="bg-brand-surface text-brand-indigo font-display text-sm font-semibold px-4 py-2 rounded-full"
+                className="bg-brand-blue/10 text-brand-blue font-body text-sm font-bold px-4 py-2 rounded-full"
               >
                 {industry}
               </span>

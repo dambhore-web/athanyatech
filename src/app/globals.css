@@ -3,58 +3,64 @@
 @tailwind utilities;
 
 :root {
-  --font-display: var(--font-plus-jakarta), sans-serif;
-  --font-body: var(--font-lora), serif;
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-body:    var(--font-manrope), sans-serif;
+  --font-mono:    var(--font-jetbrains-mono), monospace;
 }
 
 body {
-  background-color: #F7F4EF;
-  color: #1A2240;
+  background-color: #F6F8FB;
+  color: #20303F;
   font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
+  color: #102A5C;
+  text-wrap: balance;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #1769E0;
+  outline-offset: 2px;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  .font-display { font-family: var(--font-display); }
+  .font-body    { font-family: var(--font-body); }
+  .font-mono    { font-family: var(--font-mono); }
 
-  .font-display {
-    font-family: var(--font-display);
-  }
-
-  .font-body {
+  .eyebrow {
     font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 11.5px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #1769E0;
+  }
+
+  .gradient-navy {
+    background: linear-gradient(160deg, #102A5C 0%, #17346E 55%, #1B3E86 100%);
+  }
+
+  .gradient-cyan-navy {
+    background: linear-gradient(165deg, #12B8D9 0%, #1769E0 60%, #102A5C 100%);
   }
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-
-.animate-fade-up {
-  animation: fadeUp 0.6s ease forwards;
-}
-
-.animate-fade-up-delay-1 {
-  animation: fadeUp 0.6s ease 0.15s forwards;
-  opacity: 0;
-}
-
-.animate-fade-up-delay-2 {
-  animation: fadeUp 0.6s ease 0.3s forwards;
-  opacity: 0;
-}
+.animate-fade-up          { animation: fadeUp 0.6s ease forwards; }
+.animate-fade-up-delay-1  { animation: fadeUp 0.6s ease 0.15s forwards; opacity: 0; }
+.animate-fade-up-delay-2  { animation: fadeUp 0.6s ease 0.3s forwards;  opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,

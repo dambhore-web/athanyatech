@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 type ButtonProps = {
-  variant?: "primary" | "outline";
+  variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
   onClick?: () => void;
@@ -12,15 +12,14 @@ type ButtonProps = {
 
 const sizeClasses = {
   sm: "px-4 py-2 text-sm",
-  md: "px-6 py-3 text-base",
-  lg: "px-8 py-4 text-lg",
+  md: "px-5 py-2.5 text-sm",
+  lg: "px-7 py-3.5 text-base",
 };
 
 const variantClasses = {
-  primary:
-    "bg-brand-gold text-brand-dark font-semibold hover:bg-brand-gold-light transition-colors",
-  outline:
-    "border-2 border-brand-indigo text-brand-indigo font-semibold hover:bg-brand-indigo hover:text-white transition-colors",
+  primary:   "bg-brand-blue text-white font-bold hover:bg-brand-navy transition-colors",
+  secondary: "bg-transparent text-brand-navy border border-brand-line-strong font-bold hover:bg-brand-sunken transition-colors",
+  ghost:     "bg-transparent text-brand-blue font-bold hover:text-brand-navy transition-colors px-0",
 };
 
 export default function Button({
@@ -32,14 +31,10 @@ export default function Button({
   className = "",
   type = "button",
 }: ButtonProps) {
-  const base = `font-display rounded inline-block ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+  const base = `font-body rounded inline-block ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
   if (href) {
-    return (
-      <Link href={href} className={base}>
-        {children}
-      </Link>
-    );
+    return <Link href={href} className={base}>{children}</Link>;
   }
 
   return (
