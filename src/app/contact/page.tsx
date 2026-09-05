@@ -72,13 +72,19 @@ export default function ContactPage() {
             <div className="bg-brand-sunken rounded-card border border-brand-line p-6">
               <p className="eyebrow mb-4">Prefer to reach out directly?</p>
               <a
+                href="tel:+918530333588"
+                className="text-brand-blue font-body font-bold hover:text-brand-navy transition-colors block mb-1"
+              >
+                +91 85303 33588
+              </a>
+              <a
                 href="mailto:hello@athanyatechnologies.com"
-                className="text-brand-blue font-body font-bold hover:text-brand-navy transition-colors block mb-2"
+                className="text-brand-blue font-body font-bold hover:text-brand-navy transition-colors block mb-3"
               >
                 hello@athanyatechnologies.com
               </a>
               <p className="text-brand-ink-soft font-body text-sm">
-                We read every email and respond the same business day.
+                We read every message and respond the same business day.
               </p>
             </div>
           </div>

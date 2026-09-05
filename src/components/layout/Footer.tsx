@@ -49,6 +49,12 @@ export default function Footer() {
           <div>
             <p className="eyebrow text-blue-300 mb-4">Get in touch</p>
             <a
+              href="tel:+918530333588"
+              className="text-blue-200 hover:text-brand-cyan transition-colors text-sm font-body block mb-1"
+            >
+              +91 85303 33588
+            </a>
+            <a
               href="mailto:hello@athanyatechnologies.com"
               className="text-blue-200 hover:text-brand-cyan transition-colors text-sm font-body block"
             >
