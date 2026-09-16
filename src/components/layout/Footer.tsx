@@ -51,7 +51,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://www.app.gupo.in"
+                  href="https://gupo.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-200 hover:text-brand-cyan transition-colors text-sm font-body"
