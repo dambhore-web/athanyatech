@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="gradient-navy text-white">
       <div className="max-w-6xl mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
@@ -43,6 +43,22 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="eyebrow text-blue-300 mb-4">Our Products</p>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://www.app.gupo.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-200 hover:text-brand-cyan transition-colors text-sm font-body"
+                >
+                  Gupo — Group Buying App
+                </a>
+              </li>
             </ul>
           </div>
 
