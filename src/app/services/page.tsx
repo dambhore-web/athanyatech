@@ -9,7 +9,16 @@ import CtaBanner from "@/components/sections/CtaBanner";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "AI solutions, mobile apps, web automation, data analysis, and website creation — built for small and medium businesses.",
+    "AI solutions, mobile app development, web automation, data analysis, and website creation for small and medium businesses in Pune and Maharashtra. Fixed price. Plain English.",
+  alternates: {
+    canonical: "https://www.athanyatechnologies.com/services",
+  },
+  openGraph: {
+    title: "IT Services for SMBs in Pune — Athanya Technologies",
+    description:
+      "AI tools, mobile apps, web automation, data dashboards, and websites — built for SMBs in Pune and Maharashtra. Fixed price. No jargon.",
+    url: "https://www.athanyatechnologies.com/services",
+  },
 };
 
 const services = [
@@ -110,9 +119,52 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "IT Services by Athanya Technologies",
+  description: "Technology services for small and medium businesses in Pune, Maharashtra",
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.name,
+      description: service.definition,
+      provider: {
+        "@type": "Organization",
+        name: "Athanya Technologies",
+        url: "https://www.athanyatechnologies.com",
+      },
+      areaServed: "Maharashtra, India",
+    },
+  })),
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <section className="gradient-navy pt-32 pb-16" aria-labelledby="services-page-heading">
         <div className="max-w-6xl mx-auto px-6">
           <SectionLabel light>Our services</SectionLabel>

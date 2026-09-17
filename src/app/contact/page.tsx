@@ -5,7 +5,16 @@ import ContactForm from "@/components/ui/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get a free consultation with Athanya Technologies. Tell us about your business challenge and we'll get back to you within 24 hours.",
+    "Get a free consultation with Athanya Technologies in Pune. Tell us about your business challenge and we'll get back to you within 24 hours. No obligation.",
+  alternates: {
+    canonical: "https://www.athanyatechnologies.com/contact",
+  },
+  openGraph: {
+    title: "Contact Athanya Technologies — Free Consultation",
+    description:
+      "Reach out to our Pune-based team for a free, no-obligation consultation. We respond within 24 hours.",
+    url: "https://www.athanyatechnologies.com/contact",
+  },
 };
 
 const nextSteps = [

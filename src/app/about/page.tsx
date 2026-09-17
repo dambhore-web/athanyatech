@@ -6,7 +6,16 @@ import CtaBanner from "@/components/sections/CtaBanner";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Athanya Technologies is a small, dedicated team helping small and medium businesses get the technology they need — without the confusion.",
+    "Athanya Technologies is a Pune-based IT team helping small and medium businesses across Maharashtra get the technology they need — without the confusion or the jargon.",
+  alternates: {
+    canonical: "https://www.athanyatechnologies.com/about",
+  },
+  openGraph: {
+    title: "About Athanya Technologies — Pune IT Solutions Team",
+    description:
+      "A small, dedicated team in Pune helping SMBs across Maharashtra get the technology they need — without confusion or jargon.",
+    url: "https://www.athanyatechnologies.com/about",
+  },
 };
 
 const approachSteps = [
